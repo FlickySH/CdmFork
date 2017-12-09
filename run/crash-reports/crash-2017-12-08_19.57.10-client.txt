@@ -1,0 +1,134 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 12/8/17 7:57 PM
+Description: Updating screen events
+
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1967)
+	at com.mrcrayfish.device.programs.ApplicationCalculator.del(ApplicationCalculator.java:215)
+	at com.mrcrayfish.device.programs.ApplicationCalculator.access$100(ApplicationCalculator.java:13)
+	at com.mrcrayfish.device.programs.ApplicationCalculator$12.onClick(ApplicationCalculator.java:173)
+	at com.mrcrayfish.device.api.app.component.Button.handleMouseClick(Button.java:268)
+	at com.mrcrayfish.device.api.app.Layout.handleMouseClick(Layout.java:216)
+	at com.mrcrayfish.device.api.app.Application.handleMouseClick(Application.java:153)
+	at com.mrcrayfish.device.core.Window.handleMouseClick(Window.java:205)
+	at com.mrcrayfish.device.core.Laptop.mouseClicked(Laptop.java:264)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:611)
+	at com.mrcrayfish.device.core.Laptop.handleMouseInput(Laptop.java:388)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:576)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1884)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1186)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at java.lang.String.substring(String.java:1967)
+	at com.mrcrayfish.device.programs.ApplicationCalculator.del(ApplicationCalculator.java:215)
+	at com.mrcrayfish.device.programs.ApplicationCalculator.access$100(ApplicationCalculator.java:13)
+	at com.mrcrayfish.device.programs.ApplicationCalculator$12.onClick(ApplicationCalculator.java:173)
+	at com.mrcrayfish.device.api.app.component.Button.handleMouseClick(Button.java:268)
+	at com.mrcrayfish.device.api.app.Layout.handleMouseClick(Layout.java:216)
+	at com.mrcrayfish.device.api.app.Application.handleMouseClick(Application.java:153)
+	at com.mrcrayfish.device.core.Window.handleMouseClick(Window.java:205)
+	at com.mrcrayfish.device.core.Laptop.mouseClicked(Laptop.java:264)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:611)
+	at com.mrcrayfish.device.core.Laptop.handleMouseInput(Laptop.java:388)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:576)
+
+-- Affected screen --
+Details:
+	Screen name: com.mrcrayfish.device.core.Laptop
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player631'/131, l='MpServer', x=-747.36, y=4.00, z=-739.19]]
+	Chunk stats: MultiplayerChunkCache: 589, 589
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-767,4,-600), Chunk: (at 1,0,8 in -48,-38; contains blocks -768,0,-608 to -753,255,-593), Region: (-2,-2; contains chunks -64,-64 to -33,-33, blocks -1024,0,-1024 to -513,255,-513)
+	Level time: 200961 game time, 185225 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 66 total; [EntitySkeleton['Skeleton'/132, l='MpServer', x=-703.78, y=4.00, z=-818.69], EntityCreeper['Creeper'/135, l='MpServer', x=-738.50, y=4.00, z=-802.50], EntityZombie['Zombie'/138, l='MpServer', x=-731.50, y=4.00, z=-802.50], EntityZombie['Zombie'/139, l='MpServer', x=-773.50, y=4.00, z=-814.50], EntityZombie['Zombie'/140, l='MpServer', x=-758.50, y=4.00, z=-816.50], EntityZombie['Zombie'/141, l='MpServer', x=-758.50, y=4.00, z=-817.50], EntityZombie['Zombie'/142, l='MpServer', x=-759.47, y=4.00, z=-809.71], EntityCreeper['Creeper'/143, l='MpServer', x=-800.50, y=4.00, z=-807.50], EntityHorse['Horse'/29, l='MpServer', x=-822.81, y=4.00, z=-709.79], EntityChicken['Chicken'/30, l='MpServer', x=-819.33, y=4.00, z=-718.18], EntityPig['Pig'/31, l='MpServer', x=-824.28, y=4.00, z=-700.58], EntityCreeper['Creeper'/32, l='MpServer', x=-824.17, y=4.00, z=-695.84], EntityCreeper['Creeper'/33, l='MpServer', x=-814.85, y=4.00, z=-688.85], EntitySpider['Spider'/38, l='MpServer', x=-807.50, y=4.00, z=-798.50], EntityPig['Pig'/39, l='MpServer', x=-815.31, y=4.00, z=-726.79], EntityPig['Pig'/46, l='MpServer', x=-799.08, y=4.00, z=-711.57], EntitySpider['Spider'/47, l='MpServer', x=-787.49, y=4.00, z=-668.07], EntityZombie['Zombie'/48, l='MpServer', x=-797.19, y=4.00, z=-668.57], EntitySkeleton['Skeleton'/52, l='MpServer', x=-770.79, y=4.00, z=-768.29], EntitySkeleton['Skeleton'/53, l='MpServer', x=-768.69, y=4.00, z=-767.43], EntityCreeper['Creeper'/54, l='MpServer', x=-768.23, y=4.00, z=-764.43], EntitySkeleton['Skeleton'/55, l='MpServer', x=-782.50, y=4.00, z=-758.50], EntityZombie['Zombie'/56, l='MpServer', x=-778.50, y=4.00, z=-763.50], EntityZombie['Zombie'/57, l='MpServer', x=-777.38, y=4.00, z=-763.22], EntityZombie['Zombie'/58, l='MpServer', x=-774.50, y=4.00, z=-757.50], EntityHorse['Horse'/59, l='MpServer', x=-774.83, y=4.00, z=-721.38], EntitySlime['Slime'/60, l='MpServer', x=-772.23, y=4.14, z=-705.54], EntitySpider['Spider'/61, l='MpServer', x=-781.50, y=4.00, z=-679.50], EntitySpider['Spider'/62, l='MpServer', x=-783.50, y=4.00, z=-675.50], EntitySpider['Spider'/63, l='MpServer', x=-776.50, y=4.00, z=-679.50], EntityZombie['Zombie'/65, l='MpServer', x=-763.31, y=4.00, z=-786.77], EntitySlime['Slime'/66, l='MpServer', x=-765.51, y=4.00, z=-747.36], EntityEnderman['Enderman'/67, l='MpServer', x=-753.48, y=5.00, z=-734.41], EntitySlime['Slime'/68, l='MpServer', x=-760.13, y=4.00, z=-713.30], EntitySpider['Spider'/69, l='MpServer', x=-758.50, y=4.00, z=-701.50], EntitySpider['Spider'/74, l='MpServer', x=-738.91, y=4.00, z=-785.12], EntitySlime['Slime'/75, l='MpServer', x=-742.40, y=5.25, z=-771.08], EntitySkeleton['Skeleton'/76, l='MpServer', x=-744.21, y=4.00, z=-756.23], EntitySlime['Slime'/77, l='MpServer', x=-745.35, y=5.18, z=-729.35], EntityZombie['Zombie'/78, l='MpServer', x=-750.45, y=5.00, z=-728.80], EntityCreeper['Creeper'/79, l='MpServer', x=-751.19, y=4.00, z=-704.70], EntityVillager['Villager'/80, l='MpServer', x=-744.46, y=5.00, z=-683.70], EntityZombie['Zombie'/81, l='MpServer', x=-746.30, y=5.00, z=-682.54], EntityVillager['Villager'/82, l='MpServer', x=-750.46, y=5.00, z=-677.70], EntitySlime['Slime'/85, l='MpServer', x=-734.42, y=4.00, z=-754.70], EntitySlime['Slime'/86, l='MpServer', x=-724.38, y=4.28, z=-721.70], EntitySpider['Spider'/87, l='MpServer', x=-720.53, y=4.00, z=-677.97], EntitySlime['Slime'/90, l='MpServer', x=-707.13, y=4.00, z=-740.72], EntitySpider['Spider'/91, l='MpServer', x=-717.89, y=4.00, z=-724.03], EntitySlime['Slime'/92, l='MpServer', x=-706.09, y=4.00, z=-713.84], EntitySpider['Spider'/93, l='MpServer', x=-704.59, y=4.00, z=-692.80], EntityHorse['Horse'/99, l='MpServer', x=-702.09, y=4.00, z=-746.03], EntitySpider['Spider'/100, l='MpServer', x=-701.50, y=4.00, z=-720.50], EntitySkeleton['Skeleton'/101, l='MpServer', x=-694.80, y=4.00, z=-704.42], EntitySpider['Spider'/102, l='MpServer', x=-703.93, y=4.00, z=-694.95], EntityZombie['Zombie'/103, l='MpServer', x=-701.26, y=4.00, z=-679.27], EntityZombie['Zombie'/104, l='MpServer', x=-698.50, y=4.00, z=-675.50], EntitySpider['Spider'/105, l='MpServer', x=-697.50, y=4.00, z=-662.50], EntityCreeper['Creeper'/107, l='MpServer', x=-703.50, y=4.00, z=-671.50], EntityCreeper['Creeper'/108, l='MpServer', x=-698.49, y=4.00, z=-667.78], EntityEnderman['Enderman'/111, l='MpServer', x=-676.50, y=4.00, z=-752.50], EntitySheep['Sheep'/112, l='MpServer', x=-674.85, y=4.00, z=-751.07], EntityEnderman['Enderman'/113, l='MpServer', x=-679.50, y=4.00, z=-741.50], EntityPlayerSP['Player631'/131, l='MpServer', x=-747.36, y=4.00, z=-739.19], EntityChicken['Chicken'/114, l='MpServer', x=-671.83, y=4.00, z=-713.27], EntityPig['Pig'/115, l='MpServer', x=-674.20, y=4.00, z=-689.77]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:461)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2897)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:462)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_144, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 465444536 bytes (443 MB) / 1002438656 bytes (956 MB) up to 1886912512 bytes (1799 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.1.2555 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State     | ID        | Version      | Source                           | Signature |
+	|:--------- |:--------- |:------------ |:-------------------------------- |:--------- |
+	| UCHIJAAAA | minecraft | 1.12.2       | minecraft.jar                    | None      |
+	| UCHIJAAAA | mcp       | 9.42         | minecraft.jar                    | None      |
+	| UCHIJAAAA | FML       | 8.0.99.99    | forgeSrc-1.12.2-14.23.1.2555.jar | None      |
+	| UCHIJAAAA | forge     | 14.23.1.2555 | forgeSrc-1.12.2-14.23.1.2555.jar | None      |
+	| UCHIJAAAA | cdm       | 0.2.0-pre4   | device-mod-0.2.0pre4.jar         | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'Intel' Version: '4.5.0 - Build 22.20.16.4749' Renderer: 'Intel(R) HD Graphics 620'
+	Launched Version: 1.12.2
+	LWJGL: 2.9.4
+	OpenGL: Intel(R) HD Graphics 620 GL version 4.5.0 - Build 22.20.16.4749, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz

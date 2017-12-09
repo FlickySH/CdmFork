@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MrCrayfishDeviceMod-master.iml" filepath="$PROJECT_DIR$/MrCrayfishDeviceMod-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MrCrayfishDeviceMod-master_api.iml" filepath="$PROJECT_DIR$/.idea/modules/MrCrayfishDeviceMod-master_api.iml" group="MrCrayfishDeviceMod-master" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MrCrayfishDeviceMod-master_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MrCrayfishDeviceMod-master_main.iml" group="MrCrayfishDeviceMod-master" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MrCrayfishDeviceMod-master_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MrCrayfishDeviceMod-master_test.iml" group="MrCrayfishDeviceMod-master" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,138 @@
+---- Minecraft Crash Report ----
+// But it works on my machine.
+
+Time: 12/9/17 12:20 PM
+Description: Updating screen events
+
+java.lang.NullPointerException: Updating screen events
+	at com.mrcrayfish.device.programs.ApplicationNoteStash.lambda$null$4(ApplicationNoteStash.java:82)
+	at com.mrcrayfish.device.core.io.FileSystem.setupApplicationFolder(FileSystem.java:301)
+	at com.mrcrayfish.device.core.io.FileSystem.getApplicationFolder(FileSystem.java:248)
+	at com.mrcrayfish.device.programs.ApplicationNoteStash.lambda$init$5(ApplicationNoteStash.java:80)
+	at com.mrcrayfish.device.api.app.Layout.init(Layout.java:110)
+	at com.mrcrayfish.device.api.app.Application.setCurrentLayout(Application.java:81)
+	at com.mrcrayfish.device.programs.ApplicationNoteStash.init(ApplicationNoteStash.java:285)
+	at com.mrcrayfish.device.core.Window.init(Window.java:63)
+	at com.mrcrayfish.device.core.Laptop.open(Laptop.java:432)
+	at com.mrcrayfish.device.core.TaskBar.handleClick(TaskBar.java:169)
+	at com.mrcrayfish.device.core.Laptop.mouseClicked(Laptop.java:250)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:611)
+	at com.mrcrayfish.device.core.Laptop.handleMouseInput(Laptop.java:388)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:576)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1884)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1186)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at com.mrcrayfish.device.programs.ApplicationNoteStash.lambda$null$4(ApplicationNoteStash.java:82)
+	at com.mrcrayfish.device.core.io.FileSystem.setupApplicationFolder(FileSystem.java:301)
+	at com.mrcrayfish.device.core.io.FileSystem.getApplicationFolder(FileSystem.java:248)
+	at com.mrcrayfish.device.programs.ApplicationNoteStash.lambda$init$5(ApplicationNoteStash.java:80)
+	at com.mrcrayfish.device.api.app.Layout.init(Layout.java:110)
+	at com.mrcrayfish.device.api.app.Application.setCurrentLayout(Application.java:81)
+	at com.mrcrayfish.device.programs.ApplicationNoteStash.init(ApplicationNoteStash.java:285)
+	at com.mrcrayfish.device.core.Window.init(Window.java:63)
+	at com.mrcrayfish.device.core.Laptop.open(Laptop.java:432)
+	at com.mrcrayfish.device.core.TaskBar.handleClick(TaskBar.java:169)
+	at com.mrcrayfish.device.core.Laptop.mouseClicked(Laptop.java:250)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:611)
+	at com.mrcrayfish.device.core.Laptop.handleMouseInput(Laptop.java:388)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:576)
+
+-- Affected screen --
+Details:
+	Screen name: com.mrcrayfish.device.core.Laptop
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player188'/61, l='MpServer', x=-727.70, y=7.16, z=-708.11]]
+	Chunk stats: MultiplayerChunkCache: 623, 623
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-767,4,-600), Chunk: (at 1,0,8 in -48,-38; contains blocks -768,0,-608 to -753,255,-593), Region: (-2,-2; contains chunks -64,-64 to -33,-33, blocks -1024,0,-1024 to -513,255,-513)
+	Level time: 468523 game time, 143221 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 15 total; [EntityPig['Pig'/34, l='MpServer', x=-784.73, y=4.00, z=-702.20], EntitySheep['Sheep'/35, l='MpServer', x=-788.56, y=4.00, z=-654.81], EntityPig['Pig'/38, l='MpServer', x=-776.22, y=4.00, z=-683.18], EntityHorse['Horse'/40, l='MpServer', x=-764.07, y=4.00, z=-709.10], EntityVillager['Villager'/42, l='MpServer', x=-744.39, y=5.00, z=-681.84], EntityVillager['Villager'/43, l='MpServer', x=-744.32, y=5.00, z=-682.72], EntityPig['Pig'/44, l='MpServer', x=-736.60, y=4.00, z=-645.27], EntityHorse['Horse'/45, l='MpServer', x=-705.11, y=4.00, z=-734.85], EntityPig['Pig'/46, l='MpServer', x=-706.73, y=4.00, z=-637.38], EntitySheep['Sheep'/47, l='MpServer', x=-689.82, y=4.00, z=-758.81], EntityPig['Pig'/48, l='MpServer', x=-691.19, y=4.00, z=-631.18], EntityChicken['Chicken'/51, l='MpServer', x=-683.16, y=4.00, z=-711.75], EntityPig['Pig'/53, l='MpServer', x=-676.46, y=4.00, z=-684.78], EntityItem['item.item.egg'/723575, l='MpServer', x=-682.93, y=4.00, z=-712.49], EntityPlayerSP['Player188'/61, l='MpServer', x=-727.70, y=7.16, z=-708.11]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:461)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2897)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:462)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_144, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 541544560 bytes (516 MB) / 964165632 bytes (919 MB) up to 1886912512 bytes (1799 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.1.2555 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State     | ID        | Version      | Source                           | Signature |
+	|:--------- |:--------- |:------------ |:-------------------------------- |:--------- |
+	| UCHIJAAAA | minecraft | 1.12.2       | minecraft.jar                    | None      |
+	| UCHIJAAAA | mcp       | 9.42         | minecraft.jar                    | None      |
+	| UCHIJAAAA | FML       | 8.0.99.99    | forgeSrc-1.12.2-14.23.1.2555.jar | None      |
+	| UCHIJAAAA | forge     | 14.23.1.2555 | forgeSrc-1.12.2-14.23.1.2555.jar | None      |
+	| UCHIJAAAA | cdm       | 0.2.0-pre4   | device-mod-0.2.0pre4.jar         | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'Intel' Version: '4.5.0 - Build 22.20.16.4749' Renderer: 'Intel(R) HD Graphics 620'
+	Launched Version: 1.12.2
+	LWJGL: 2.9.4
+	OpenGL: Intel(R) HD Graphics 620 GL version 4.5.0 - Build 22.20.16.4749, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
