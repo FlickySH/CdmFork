@@ -105,7 +105,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="jxbrowser-6.16" level="project" />
-    <orderEntry type="library" name="jxbrowser-6.17" level="project" />
   </component>
 </module>

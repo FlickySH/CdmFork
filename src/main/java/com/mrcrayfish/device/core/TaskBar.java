@@ -128,17 +128,17 @@ public class TaskBar
             }
         }
 
-        mc.fontRenderer.drawString(timeToString(mc.player.world.getWorldTime()), x + 334, y + 5, Color.WHITE.getRGB(), true);
+        mc.fontRenderer.drawString(timeToString(mc.player.world.getWorldTime()), x + 374, y + 5, Color.WHITE.getRGB(), true);
 
         mc.getTextureManager().bindTexture(APP_BAR_GUI);
 
-        if(isMouseInside(mouseX, mouseY, x + 317, y + 3, x + 328, y + 14))
+        if(isMouseInside(mouseX, mouseY, x + 357, y + 3, x + 369, y + 14))
         {
-            Gui.drawRect(x + 316, y + 2, x + 330, y + 16, new Color(1.0F, 1.0F, 1.0F, 0.1F).getRGB());
+            Gui.drawRect(x + 369, y + 2, x + 357, y + 16, new Color(1.0F, 1.0F, 1.0F, 0.1F).getRGB());
         }
 
         /* Settings App */
-        Icons.WIFI_HIGH.draw(mc, x + 318, y + 4);
+        Icons.WIFI_HIGH.draw(mc, x + 358, y + 4);
 
         /* Other Apps */
         if(isMouseInside(mouseX, mouseY, x + 18, y + 1, x + 236, y + 16))
@@ -171,7 +171,7 @@ public class TaskBar
             }
         }
 
-        if(isMouseInside(mouseX, mouseY, x + 317, y + 3, x + 328, y + 14))
+        if(isMouseInside(mouseX, mouseY, x + 357, y + 3, x + 369, y + 14))
         {
             if(Laptop.getSystem().hasContext())
             {

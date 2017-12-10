@@ -9,30 +9,20 @@
       <change beforePath="$PROJECT_DIR$/.gradle/2.14/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14/taskArtifacts/taskArtifacts.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/2.14/taskArtifacts/treeSnapshotUsage.bin" afterPath="$PROJECT_DIR$/.gradle/2.14/taskArtifacts/treeSnapshotUsage.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/2.14/taskArtifacts/treeSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14/taskArtifacts/treeSnapshots.bin" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/CdmFork.iml" afterPath="$PROJECT_DIR$/.idea/modules/CdmFork.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/CdmFork_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/CdmFork_main.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/cdm/lang/en_us.lang" afterPath="$PROJECT_DIR$/build/resources/main/assets/cdm/lang/en_us.lang" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/MrCrayfishDeviceMod.java" afterPath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/MrCrayfishDeviceMod.java" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/api/app/Application.java" afterPath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/api/app/Application.java" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/api/app/Dialog.java" afterPath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/api/app/Dialog.java" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/api/io/File.java" afterPath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/api/io/File.java" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/api/io/Folder.java" afterPath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/api/io/Folder.java" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/cdm/textures/gui/laptop_wallpaper_1.png" afterPath="$PROJECT_DIR$/build/resources/main/assets/cdm/textures/gui/laptop_wallpaper_1.png" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/block/BlockLaptop.java" afterPath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/block/BlockLaptop.java" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/core/Laptop.java" afterPath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/core/Laptop.java" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/core/io/task/TaskGetMainDrive.java" afterPath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/core/io/task/TaskGetMainDrive.java" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/programs/system/ApplicationFileBrowser.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/programs/system/component/FileBrowser.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/core/TaskBar.java" afterPath="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/core/TaskBar.java" />
+      <change beforePath="$PROJECT_DIR$/classes/production/CdmFork_main/assets/cdm/textures/gui/laptop_wallpaper_1.png" afterPath="$PROJECT_DIR$/classes/production/CdmFork_main/assets/cdm/textures/gui/laptop_wallpaper_1.png" />
       <change beforePath="$PROJECT_DIR$/run/config/splash.properties" afterPath="$PROJECT_DIR$/run/config/splash.properties" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2017-12-09-1.log.gz" afterPath="$PROJECT_DIR$/run/logs/2017-12-09-1.log.gz" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2017-12-09-2.log.gz" afterPath="$PROJECT_DIR$/run/logs/2017-12-09-2.log.gz" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2017-12-09-3.log.gz" afterPath="$PROJECT_DIR$/run/logs/2017-12-09-3.log.gz" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2017-12-09-4.log.gz" afterPath="$PROJECT_DIR$/run/logs/2017-12-09-4.log.gz" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2017-12-09-5.log.gz" afterPath="$PROJECT_DIR$/run/logs/2017-12-09-5.log.gz" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2017-12-09-6.log.gz" afterPath="$PROJECT_DIR$/run/logs/2017-12-09-6.log.gz" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2017-12-09-7.log.gz" afterPath="$PROJECT_DIR$/run/logs/2017-12-09-7.log.gz" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/villages_nether.dat" afterPath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/villages_nether.dat" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM1/data/villages_end.dat" afterPath="$PROJECT_DIR$/run/saves/New World/DIM1/data/villages_end.dat" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World/data/villages.dat" afterPath="$PROJECT_DIR$/run/saves/New World/data/villages.dat" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/emails.dat" afterPath="$PROJECT_DIR$/run/saves/New World/emails.dat" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat_old" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat_old" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-2.-1.mca" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-2.-1.mca" />
@@ -40,18 +30,10 @@
       <change beforePath="$PROJECT_DIR$/run/saves/New World/session.lock" afterPath="$PROJECT_DIR$/run/saves/New World/session.lock" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" afterPath="$PROJECT_DIR$/run/usercache.json" />
       <change beforePath="$PROJECT_DIR$/run/usernamecache.json" afterPath="$PROJECT_DIR$/run/usernamecache.json" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/MrCrayfishDeviceMod.java" afterPath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/MrCrayfishDeviceMod.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/api/app/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/api/app/Application.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/api/app/Dialog.java" afterPath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/api/app/Dialog.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/api/io/File.java" afterPath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/api/io/File.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/api/io/Folder.java" afterPath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/api/io/Folder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/block/BlockLaptop.java" afterPath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/block/BlockLaptop.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/Laptop.java" afterPath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/Laptop.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/io/task/TaskGetMainDrive.java" afterPath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/io/task/TaskGetMainDrive.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/programs/system/ApplicationFileBrowser.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/programs/system/component/FileBrowser.java" afterPath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/programs/system/component/Explorer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/cdm/lang/en_us.lang" afterPath="$PROJECT_DIR$/src/main/resources/assets/cdm/lang/en_us.lang" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/cdm/textures/gui/file_browser.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/cdm/textures/icon/file_browser.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/TaskBar.java" afterPath="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/TaskBar.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/cdm/textures/gui/laptop_wallpaper_1.png" afterPath="$PROJECT_DIR$/src/main/resources/assets/cdm/textures/gui/laptop_wallpaper_1.png" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -114,11 +96,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MrCrayfishDeviceMod.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MrCrayfishDeviceMod.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/MrCrayfishDeviceMod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
+            <state relative-caret-position="1338">
               <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="701">
+              <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Laptop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/Laptop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2266">
+              <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlockLaptop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/block/BlockLaptop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="223" column="21" lean-forward="false" selection-start-line="223" selection-start-column="21" selection-end-line="223" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskBar.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/TaskBar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1628">
+              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemFlashDrive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/item/ItemFlashDrive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemPrinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/item/ItemPrinter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemLaptop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/item/ItemLaptop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceItems.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/init/DeviceItems.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -155,6 +217,9 @@
       <find>get</find>
       <find>g</find>
       <find>ver</find>
+      <find>onBlock</find>
+      <find>timeT</find>
+      <find>Brea</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -592,7 +657,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4537599351000" />
+        <entry key="$PROJECT_DIR$" value="4537992766645" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="1198330841" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -736,8 +802,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/api/app/component/NumberSelector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/api/app/component/Slider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/object/TileGrid.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/programs/ApplicationBoatRacers.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/programs/email/ApplicationEmail.java" />
@@ -753,20 +817,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/gui/GuiButtonClose.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/Window.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/programs/ApplicationNoteStash.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/TaskBar.java" />
         <option value="$PROJECT_DIR$/build/sources/main/java/com/mrcrayfish/device/core/io/task/TaskGetMainDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/io/task/TaskGetMainDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/programs/ApplicationExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/programs/system/ApplicationFileBrowser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/programs/system/component/FileBrowser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/HasSubModels.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/item/ItemFlashDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/item/ItemPrinter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/cdm/blockstates/laptop.json" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/cdm/blockstates/paper.json" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/tileentity/TileEntityPrinter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/cdm/blockstates/printer.json" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/block/BlockLaptop.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/block/BlockPrinter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/io/FileSystem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/init/DeviceBlocks.java" />
@@ -787,6 +848,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/programs/system/component/WebBrowser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/swing/SwingUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/MrCrayfishDeviceMod.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/Laptop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/item/ItemFlashDrive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/block/BlockLaptop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/TaskBar.java" />
       </list>
     </option>
   </component>
@@ -796,7 +862,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="width" value="1774" />
     <option name="height" value="1048" />
@@ -899,6 +965,39 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="mrcrayfish" type="462c0819:PsiDirectoryNode" />
               <item name="device" type="462c0819:PsiDirectoryNode" />
+              <item name="block" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CdmFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CdmFork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="mrcrayfish" type="462c0819:PsiDirectoryNode" />
+              <item name="device" type="462c0819:PsiDirectoryNode" />
+              <item name="init" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CdmFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CdmFork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="mrcrayfish" type="462c0819:PsiDirectoryNode" />
+              <item name="device" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CdmFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CdmFork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="mrcrayfish" type="462c0819:PsiDirectoryNode" />
+              <item name="device" type="462c0819:PsiDirectoryNode" />
               <item name="programs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -925,6 +1024,29 @@
               <item name="programs" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CdmFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CdmFork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="mrcrayfish" type="462c0819:PsiDirectoryNode" />
+              <item name="device" type="462c0819:PsiDirectoryNode" />
+              <item name="tileentity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CdmFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CdmFork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="mrcrayfish" type="462c0819:PsiDirectoryNode" />
+              <item name="device" type="462c0819:PsiDirectoryNode" />
+              <item name="tileentity" type="462c0819:PsiDirectoryNode" />
+              <item name="render" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CdmFork" type="b2602c69:ProjectViewProjectNode" />
@@ -992,7 +1114,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Device-Mod-Apps-master" />
-    <property name="SearchEverywhereHistoryKey" value="classP&#9;PSI&#9;JAVA://com.google.common.reflect.ClassPath&#10;label&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/api/app/component/Label.java&#10;ca&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/ApplicationCalculator.java&#10;file&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/core/io/FileSystem.java&#10;bloc&#9;PSI&#9;JAVA://com.mrcrayfish.device.block.BlockLaptop&#10;ex&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/ApplicationExample.java&#10;exa&#9;PSI&#9;JAVA://com.mrcrayfish.device.programs.ApplicationExample&#10;calc&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/ApplicationCalculator.java&#10;taskg&#9;PSI&#9;JAVA://com.mrcrayfish.device.core.io.task.TaskGetMainDrive&#10;icon&#9;PSI&#9;JAVA://com.mrcrayfish.device.api.app.Icons&#10;applib&#9;PSI&#9;JAVA://com.mrcrayfish.device.programs.system.ApplicationFileBrowser&#10;fil&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/system/component/FileBrowser.java&#10;lap&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/core/Laptop.java&#10;tas&#9;PSI&#9;JAVA://com.mrcrayfish.device.core.TaskBar&#10;bank&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/system/ApplicationBank.java&#10;w&#9;PSI&#9;JAVA://com.mrcrayfish.device.core.Window&#10;guib&#9;PSI&#9;JAVA://com.mrcrayfish.device.gui.GuiButtonClose&#10;it&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/api/app/component/ItemList.java&#10;fi&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/system/component/FileBrowser.java&#10;dia&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/api/app/Dialog.java" />
+    <property name="SearchEverywhereHistoryKey" value="taskbar&#9;PSI&#9;JAVA://com.mrcrayfish.device.core.TaskBar&#10;lap&#9;PSI&#9;JAVA://com.mrcrayfish.device.core.Laptop&#10;classP&#9;PSI&#9;JAVA://com.google.common.reflect.ClassPath&#10;label&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/api/app/component/Label.java&#10;ca&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/ApplicationCalculator.java&#10;file&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/core/io/FileSystem.java&#10;bloc&#9;PSI&#9;JAVA://com.mrcrayfish.device.block.BlockLaptop&#10;ex&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/ApplicationExample.java&#10;exa&#9;PSI&#9;JAVA://com.mrcrayfish.device.programs.ApplicationExample&#10;calc&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/ApplicationCalculator.java&#10;taskg&#9;PSI&#9;JAVA://com.mrcrayfish.device.core.io.task.TaskGetMainDrive&#10;icon&#9;PSI&#9;JAVA://com.mrcrayfish.device.api.app.Icons&#10;applib&#9;PSI&#9;JAVA://com.mrcrayfish.device.programs.system.ApplicationFileBrowser&#10;fil&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/system/component/FileBrowser.java&#10;tas&#9;PSI&#9;JAVA://com.mrcrayfish.device.core.TaskBar&#10;bank&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/system/ApplicationBank.java&#10;w&#9;PSI&#9;JAVA://com.mrcrayfish.device.core.Window&#10;guib&#9;PSI&#9;JAVA://com.mrcrayfish.device.gui.GuiButtonClose&#10;it&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/api/app/component/ItemList.java&#10;fi&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/programs/system/component/FileBrowser.java&#10;dia&#9;FILE&#9;file://C:/Users/Aregev2/Desktop/MrCrayfishDeviceMod-master/src/main/java/com/mrcrayfish/device/api/app/Dialog.java" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -1166,30 +1288,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32742316" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13694951" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32742316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2980666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2980666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0810956" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41558442" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41489363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32742316" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1230,74 +1353,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/tileentity/TileEntityPaper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/tileentity/TileEntityPrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="366" column="1" lean-forward="false" selection-start-line="366" selection-start-column="1" selection-end-line="366" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/cdm/models/item/flash_drive/black.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/cdm/models/item/flash_drive/brown.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/cdm/models/item/flash_drive/gray.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/cdm/blockstates/paper.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/cdm/blockstates/laptop.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/cdm/blockstates/printer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/HasSubModels.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/block/BlockLaptop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="274" column="0" lean-forward="false" selection-start-line="274" selection-start-column="0" selection-end-line="274" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1344,13 +1404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/item/ItemLaptop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/assets/cdm/textures/icon/bank.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1383,6 +1436,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1491,13 +1545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="62" column="58" lean-forward="false" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1555,8 +1602,99 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/MrCrayfishDeviceMod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="1338">
           <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/api/app/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="41" column="25" lean-forward="false" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+          <folding>
+            <element signature="e#562#563#0" expanded="false" />
+            <element signature="e#597#598#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/Laptop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2266">
+          <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/item/ItemLaptop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.1.2555/snapshot/20171003/forgeSrc-1.12.2-14.23.1.2555-sources.jar!/net/minecraft/item/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/item/ItemPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/init/DeviceItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/item/ItemFlashDrive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/block/BlockLaptop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="223" column="21" lean-forward="false" selection-start-line="223" selection-start-column="21" selection-end-line="223" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mrcrayfish/device/core/TaskBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1628">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding />
         </state>
       </provider>

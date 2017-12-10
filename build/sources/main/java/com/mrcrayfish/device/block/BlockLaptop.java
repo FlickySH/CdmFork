@@ -50,6 +50,8 @@ public class BlockLaptop extends BlockHorizontal implements ITileEntityProvider
 	private static final AxisAlignedBB SELECTION_BOX_OPEN = new AxisAlignedBB(0, 0, 0, 1, 12 * 0.0625, 1);
 	private static final AxisAlignedBB SELECTION_BOX_CLOSED = new AxisAlignedBB(0, 0, 0, 1, 3 * 0.0625, 1);
 
+
+
 	public BlockLaptop()
 	{
 		super(Material.ANVIL);

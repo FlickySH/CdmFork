@@ -6,6 +6,7 @@ import java.util.Random;
 import com.mrcrayfish.device.MrCrayfishDeviceMod;
 import com.mrcrayfish.device.core.Laptop;
 import com.mrcrayfish.device.init.DeviceItems;
+import com.mrcrayfish.device.item.ItemFlashDrive;
 import com.mrcrayfish.device.object.Bounds;
 import com.mrcrayfish.device.tileentity.TileEntityLaptop;
 
@@ -49,6 +50,8 @@ public class BlockLaptop extends BlockHorizontal implements ITileEntityProvider
 	private static final AxisAlignedBB BODY_CLOSED_BOX = new AxisAlignedBB(1 * 0.0625, 0.0, 1 * 0.0625, 13 * 0.0625, 2 * 0.0625, 15 * 0.0625);
 	private static final AxisAlignedBB SELECTION_BOX_OPEN = new AxisAlignedBB(0, 0, 0, 1, 12 * 0.0625, 1);
 	private static final AxisAlignedBB SELECTION_BOX_CLOSED = new AxisAlignedBB(0, 0, 0, 1, 3 * 0.0625, 1);
+
+
 
 	public BlockLaptop()
 	{
