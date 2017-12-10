@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jxbrowser-win32-6.17">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/jxBrowser/lib/jxbrowser-win32-6.17.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

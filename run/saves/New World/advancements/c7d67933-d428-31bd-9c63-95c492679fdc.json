@@ -1,0 +1,14 @@
+{
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_log": "2017-12-09 19:27:05 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "plains": "2017-12-09 19:27:05 +0200"
+    },
+    "done": false
+  }
+}

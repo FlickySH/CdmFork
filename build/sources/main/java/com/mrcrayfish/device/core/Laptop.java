@@ -12,7 +12,7 @@ import com.mrcrayfish.device.api.task.TaskManager;
 import com.mrcrayfish.device.api.utils.RenderUtil;
 import com.mrcrayfish.device.core.client.LaptopFontRenderer;
 import com.mrcrayfish.device.programs.system.SystemApplication;
-import com.mrcrayfish.device.programs.system.component.FileBrowser;
+import com.mrcrayfish.device.programs.system.component.Explorer;
 import com.mrcrayfish.device.programs.system.task.TaskUpdateApplicationData;
 import com.mrcrayfish.device.programs.system.task.TaskUpdateSystemData;
 import com.mrcrayfish.device.tileentity.TileEntityLaptop;
@@ -152,7 +152,7 @@ public class Laptop extends GuiScreen implements System
 			}
 		}
 
-		FileBrowser.refreshList = false;
+		Explorer.refreshList = false;
 	}
 	
 	@Override

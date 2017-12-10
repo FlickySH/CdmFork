@@ -4,13 +4,11 @@ import com.mrcrayfish.device.api.app.Application;
 import com.mrcrayfish.device.api.task.Callback;
 import com.mrcrayfish.device.core.io.FileSystem;
 import com.mrcrayfish.device.core.io.action.FileAction;
-import com.mrcrayfish.device.programs.system.component.FileBrowser;
+import com.mrcrayfish.device.programs.system.component.Explorer;
 import net.minecraft.nbt.NBTTagCompound;
 
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Comparator;
-import java.util.regex.Pattern;
 
 public class File
 {
@@ -420,7 +418,7 @@ public class File
 				file.parent = destination;
 				file.setDrive(destination.drive);
 				destination.files.add(file);
-				FileBrowser.refreshList = true;
+				Explorer.refreshList = true;
 			}
 			if(callback != null)
 			{
@@ -490,7 +488,7 @@ public class File
 				setDrive(destination.drive);
 				parent = destination;
 				destination.files.add(this);
-				FileBrowser.refreshList = true;
+				Explorer.refreshList = true;
 			}
 			if(callback != null)
 			{

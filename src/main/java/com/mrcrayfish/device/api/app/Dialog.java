@@ -16,7 +16,7 @@ import com.mrcrayfish.device.core.Wrappable;
 import com.mrcrayfish.device.core.io.FileSystem;
 import com.mrcrayfish.device.core.print.task.TaskPrint;
 import com.mrcrayfish.device.init.DeviceBlocks;
-import com.mrcrayfish.device.programs.system.component.FileBrowser;
+import com.mrcrayfish.device.programs.system.component.Explorer;
 import com.mrcrayfish.device.programs.system.object.ColourScheme;
 import com.mrcrayfish.device.tileentity.TileEntityPrinter;
 import net.minecraft.block.state.IBlockState;
@@ -246,7 +246,7 @@ public abstract class Dialog extends Wrappable
 	 * A simple confirmation dialog
 	 *
 	 * This can be used to prompt as user to confirm whether a
-	 * task should run. For instance, the FileBrowser component
+	 * task should run. For instance, the Explorer component
 	 * uses this dialog to prompt the user if it should override
 	 * a file.
 	 */
@@ -509,7 +509,7 @@ public abstract class Dialog extends Wrappable
 		private String negativeText = "Cancel";
 
 		private Layout main;
-		private FileBrowser browser;
+		private Explorer browser;
 		private Button buttonPositive;
 		private Button buttonNegative;
 
@@ -529,7 +529,7 @@ public abstract class Dialog extends Wrappable
 
 			main = new Layout(210, 124);
 
-			browser = new FileBrowser(0, 0, app, FileBrowser.Mode.BASIC);
+			browser = new Explorer(0, 0, app, Explorer.Mode.BASIC);
 			browser.openFolder(FileSystem.DIR_HOME);
 			browser.setFilter(file -> filter == null || filter.test(file) || file.isFolder());
 			browser.setItemClickListener((file, index, mouseButton) ->
@@ -628,7 +628,7 @@ public abstract class Dialog extends Wrappable
 		private String negativeText = "Cancel";
 
 		private Layout main;
-		private FileBrowser browser;
+		private Explorer browser;
 		private TextField textFieldFileName;
 		private Button buttonPositive;
 		private Button buttonNegative;
@@ -659,7 +659,7 @@ public abstract class Dialog extends Wrappable
 			super.init();
 			main = new Layout(210, 142);
 
-			browser = new FileBrowser(0, 0, app, FileBrowser.Mode.BASIC);
+			browser = new Explorer(0, 0, app, Explorer.Mode.BASIC);
 			browser.setFilter(file -> filter == null || filter.test(file) || file.isFolder());
 			browser.openFolder(path);
 			main.addComponent(browser);

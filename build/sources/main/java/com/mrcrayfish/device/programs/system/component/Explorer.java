@@ -33,7 +33,6 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.common.util.Constants;
-import java.time.Clock;
 
 import java.awt.*;
 import java.lang.System;
@@ -47,9 +46,9 @@ import java.util.stream.Collectors;
 /**
  * Created by Casey on 20-Jun-17.
  */
-public class FileBrowser extends Component
+public class Explorer extends Component
 {
-    private static final ResourceLocation ASSETS = new ResourceLocation("cdm:textures/gui/file_browser.png");
+    private static final ResourceLocation ASSETS = new ResourceLocation("cdm:textures/gui/explorer.png");
 
     private static final Color ITEM_BACKGROUND = Color.decode("0x9E9E9E");
     private static final Color ITEM_SELECTED = Color.decode("0x757575");
@@ -131,7 +130,7 @@ public class FileBrowser extends Component
      * @param left how many pixels from the left
      * @param top  how many pixels from the top
      */
-    public FileBrowser(int left, int top, Wrappable wrappable, Mode mode)
+    public Explorer(int left, int top, Wrappable wrappable, Mode mode)
     {
         super(left, top);
         this.wrappable = wrappable;
@@ -606,7 +605,7 @@ public class FileBrowser extends Component
             if(response.getStatus() == FileSystem.Status.SUCCESSFUL)
             {
                 fileList.addItem(file);
-                FileBrowser.refreshList = true;
+                Explorer.refreshList = true;
             }
             if(callback != null)
             {
@@ -677,7 +676,7 @@ public class FileBrowser extends Component
                 if(success)
                 {
                     fileList.removeItem(index);
-                    FileBrowser.refreshList = true;
+                    Explorer.refreshList = true;
                 }
                 setLoading(false);
             });
@@ -703,7 +702,7 @@ public class FileBrowser extends Component
                 {
                     int index = fileList.getItems().indexOf(file);
                     fileList.removeItem(index);
-                    FileBrowser.refreshList = true;
+                    Explorer.refreshList = true;
                 }
                 setLoading(false);
             });

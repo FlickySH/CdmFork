@@ -1,7 +1,6 @@
 package com.mrcrayfish.device;
 
 import com.mrcrayfish.device.api.ApplicationManager;
-import com.mrcrayfish.device.api.app.Application;
 import com.mrcrayfish.device.api.print.PrintingManager;
 import com.mrcrayfish.device.api.task.TaskManager;
 import com.mrcrayfish.device.core.io.task.*;
@@ -12,15 +11,11 @@ import com.mrcrayfish.device.gui.GuiHandler;
 import com.mrcrayfish.device.init.*;
 import com.mrcrayfish.device.network.PacketHandler;
 import com.mrcrayfish.device.programs.*;
-import com.mrcrayfish.device.programs.auction.ApplicationMineBay;
-import com.mrcrayfish.device.programs.auction.task.TaskAddAuction;
-import com.mrcrayfish.device.programs.auction.task.TaskBuyItem;
-import com.mrcrayfish.device.programs.auction.task.TaskGetAuctions;
 import com.mrcrayfish.device.programs.debug.ApplicationTextArea;
 import com.mrcrayfish.device.programs.email.ApplicationEmail;
 import com.mrcrayfish.device.programs.email.task.*;
 import com.mrcrayfish.device.programs.system.ApplicationBank;
-import com.mrcrayfish.device.programs.system.ApplicationFileBrowser;
+import com.mrcrayfish.device.programs.system.ApplicationExplorer;
 import com.mrcrayfish.device.programs.system.ApplicationSettings;
 import com.mrcrayfish.device.programs.system.task.*;
 import com.mrcrayfish.device.proxy.CommonProxy;
@@ -51,7 +46,7 @@ public class MrCrayfishDeviceMod
 
 	private static Logger logger;
 
-	public static final boolean DEVELOPER_MODE = true;
+	public static final boolean DEVELOPER_MODE = false;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) throws LaunchException
@@ -99,11 +94,12 @@ public class MrCrayfishDeviceMod
 	{
 		// Applications (Both)
 		ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID,"calculator"), ApplicationCalculator.class);
-		ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "file_browser"), ApplicationFileBrowser.class);
-		ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "settings"), ApplicationSettings.class);
+		ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "explorer"), ApplicationExplorer.class);
 		ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "note_stash"), ApplicationNoteStash.class);
-		ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "pixel_painter"), ApplicationPixelPainter.class);
+		ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "package_manager"), ApplicationPackageManager.class);
+		ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "settings"), ApplicationSettings.class);
 		ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "ender_mail"), ApplicationEmail.class);
+		ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "pixel_painter"), ApplicationPixelPainter.class);
 
 		// Core
 		TaskManager.registerTask(TaskUpdateApplicationData.class);

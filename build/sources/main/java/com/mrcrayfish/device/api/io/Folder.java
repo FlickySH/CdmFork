@@ -7,7 +7,7 @@ import com.mrcrayfish.device.core.Laptop;
 import com.mrcrayfish.device.core.io.FileSystem;
 import com.mrcrayfish.device.core.io.action.FileAction;
 import com.mrcrayfish.device.core.io.task.TaskGetFiles;
-import com.mrcrayfish.device.programs.system.component.FileBrowser;
+import com.mrcrayfish.device.programs.system.component.Explorer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.NonNullList;
@@ -131,7 +131,7 @@ public class Folder extends File
 				file.valid = true;
 				file.parent = this;
 				files.add(file);
-				FileBrowser.refreshList = true;
+				Explorer.refreshList = true;
 			}
 			if(callback != null)
 			{
@@ -230,7 +230,7 @@ public class Folder extends File
 				file.valid = false;
 				file.parent = null;
 				files.remove(file);
-				FileBrowser.refreshList = true;
+				Explorer.refreshList = true;
 			}
 			if(callback != null)
 			{

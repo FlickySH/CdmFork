@@ -2,14 +2,14 @@ package com.mrcrayfish.device.programs.system;
 
 
 import com.mrcrayfish.device.core.io.FileSystem;
-import com.mrcrayfish.device.programs.system.component.FileBrowser;
+import com.mrcrayfish.device.programs.system.component.Explorer;
 import net.minecraft.nbt.NBTTagCompound;
 
-public class ApplicationFileBrowser extends SystemApplication
+public class ApplicationExplorer extends SystemApplication
 {
-	private FileBrowser browser;
+	private Explorer browser;
 	
-	public ApplicationFileBrowser()
+	public ApplicationExplorer()
 	{
 		this.setDefaultWidth(295);
 		this.setDefaultHeight(148);
@@ -18,7 +18,7 @@ public class ApplicationFileBrowser extends SystemApplication
 	@Override
 	public void init() 
 	{
-		browser = new FileBrowser(0, 0, this, FileBrowser.Mode.FULL);
+		browser = new Explorer(0, 0, this, Explorer.Mode.FULL);
 		browser.openFolder(FileSystem.DIR_HOME);
 		this.addComponent(browser);
 	}
