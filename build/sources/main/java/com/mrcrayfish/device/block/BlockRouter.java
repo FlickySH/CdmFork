@@ -97,7 +97,7 @@ public class BlockRouter extends BlockHorizontal implements ITileEntityProvider
             if(tileEntity instanceof TileEntityRouter)
             {
                 TileEntityRouter tileEntityRouter = (TileEntityRouter) tileEntity;
-                tileEntityRouter.setDebug();
+                //tileEntityRouter.setDebug();
                 if(tileEntityRouter.isDebug())
                 {
                     PacketHandler.INSTANCE.sendToServer(new MessageSyncBlock(pos));

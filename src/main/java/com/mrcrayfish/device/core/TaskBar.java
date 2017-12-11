@@ -157,6 +157,7 @@ public class TaskBar
             int appIndex = (mouseX - x - 1) / 16 - 1 + offset;
             if(appIndex < offset + APPS_DISPLAYED && appIndex < applications.size())
             {
+                mc.getTextureManager().bindTexture(APP_BAR_GUI);
                 gui.drawTexturedModalRect(x + (appIndex - offset) * 16 + 17, y + 1, 35, 0, 16, 16);
                 gui.drawHoveringText(Collections.singletonList(applications.get(appIndex).getInfo().getName()), mouseX, mouseY);
             }

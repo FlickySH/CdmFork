@@ -13,7 +13,6 @@ import com.mrcrayfish.device.api.utils.RenderUtil;
 import com.mrcrayfish.device.core.client.LaptopFontRenderer;
 import com.mrcrayfish.device.programs.system.SystemApplication;
 import com.mrcrayfish.device.programs.system.component.Explorer;
-import com.mrcrayfish.device.programs.system.component.Explorer;
 import com.mrcrayfish.device.programs.system.task.TaskUpdateApplicationData;
 import com.mrcrayfish.device.programs.system.task.TaskUpdateSystemData;
 import com.mrcrayfish.device.tileentity.TileEntityLaptop;
@@ -53,8 +52,8 @@ public class Laptop extends GuiScreen implements System
 	private static final List<ResourceLocation> WALLPAPERS = new ArrayList<>();
 
 	private static final int BORDER = 10;
-	private static final int DEVICE_WIDTH = 384;
-	private static final int DEVICE_HEIGHT = 216;
+	private static final int DEVICE_WIDTH = 425;
+	private static final int DEVICE_HEIGHT = 239;
 	static final int SCREEN_WIDTH = DEVICE_WIDTH - BORDER * 2;
 	static final int SCREEN_HEIGHT = DEVICE_HEIGHT - BORDER * 2;
 
@@ -106,28 +105,28 @@ public class Laptop extends GuiScreen implements System
 
 	@Override
 	public void onGuiClosed()
-	{
-		Keyboard.enableRepeatEvents(false);
+    {
+        Keyboard.enableRepeatEvents(false);
 
-		/* Close all windows and sendTask application data */
-		for(Window<Application> window : windows)
+        /* Close all windows and sendTask application data */
+        for(Window<Application> window : windows)
 		{
-			if(window != null)
+        	if(window != null)
 			{
-				window.close();
+        		window.close();
 			}
 		}
 
 		/* Send system data */
-		NBTTagCompound systemData = new NBTTagCompound();
-		systemData.setInteger("CurrentWallpaper", currentWallpaper);
-		systemData.setTag("Settings", settings.toTag());
-		TaskManager.sendTask(new TaskUpdateSystemData(pos, systemData));
+        NBTTagCompound systemData = new NBTTagCompound();
+        systemData.setInteger("CurrentWallpaper", currentWallpaper);
+        systemData.setTag("Settings", settings.toTag());
+        TaskManager.sendTask(new TaskUpdateSystemData(pos, systemData));
 
 		Laptop.pos = null;
-		Laptop.system = null;
+        Laptop.system = null;
 		Laptop.mainDrive = null;
-	}
+    }
 
 	@Override
 	public void onResize(Minecraft mcIn, int width, int height)
@@ -145,8 +144,6 @@ public class Laptop extends GuiScreen implements System
 	@Override
 	public void updateScreen()
 	{
-		bar.onTick();
-
 		for(Window window : windows)
 		{
 			if(window != null)
@@ -307,29 +304,29 @@ public class Laptop extends GuiScreen implements System
 
 	@Override
 	public void handleKeyboardInput() throws IOException
-	{
-		if (Keyboard.getEventKeyState())
-		{
-			char pressed = Keyboard.getEventCharacter();
-			int code = Keyboard.getEventKey();
+    {
+        if (Keyboard.getEventKeyState())
+        {
+        	char pressed = Keyboard.getEventCharacter();
+        	int code = Keyboard.getEventKey();
 
-			if(windows[0] != null)
-			{
-				windows[0].handleKeyTyped(pressed, code);
-			}
+            if(windows[0] != null)
+    		{
+    			windows[0].handleKeyTyped(pressed, code);
+    		}
 
-			super.keyTyped(pressed, code);
-		}
-		else
-		{
-			if(windows[0] != null)
-			{
-				windows[0].handleKeyReleased(Keyboard.getEventCharacter(), Keyboard.getEventKey());
-			}
-		}
+            super.keyTyped(pressed, code);
+        }
+        else
+        {
+        	if(windows[0] != null)
+    		{
+    			windows[0].handleKeyReleased(Keyboard.getEventCharacter(), Keyboard.getEventKey());
+    		}
+        }
 
-		this.mc.dispatchKeypresses();
-	}
+        this.mc.dispatchKeypresses();
+    }
 
 	@Override
 	protected void mouseClickMove(int mouseX, int mouseY, int clickedMouseButton, long timeSinceLastClick)
@@ -390,7 +387,7 @@ public class Laptop extends GuiScreen implements System
 	{
 		super.handleMouseInput();
 		int mouseX = Mouse.getEventX() * this.width / this.mc.displayWidth;
-		int mouseY = this.height - Mouse.getEventY() * this.height / this.mc.displayHeight - 1;
+        int mouseY = this.height - Mouse.getEventY() * this.height / this.mc.displayHeight - 1;
 		int scroll = Mouse.getEventDWheel();
 		if(scroll != 0)
 		{
@@ -451,7 +448,7 @@ public class Laptop extends GuiScreen implements System
 
 		addWindow(window);
 
-		Minecraft.getMinecraft().getSoundHandler().playSound(PositionedSoundRecord.getMasterRecord(SoundEvents.UI_BUTTON_CLICK, 1.0F));
+	    Minecraft.getMinecraft().getSoundHandler().playSound(PositionedSoundRecord.getMasterRecord(SoundEvents.UI_BUTTON_CLICK, 1.0F));
 	}
 
 	public void close(Application app)
@@ -651,7 +648,6 @@ public class Laptop extends GuiScreen implements System
 	{
 		layout.updateComponents(x, y);
 		context = layout;
-		layout.init();
 	}
 
 	@Override
