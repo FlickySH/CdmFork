@@ -2,31 +2,25 @@ package com.mrcrayfish.device.core;
 
 import com.mrcrayfish.device.MrCrayfishDeviceMod;
 import com.mrcrayfish.device.api.app.Application;
-import com.mrcrayfish.device.api.app.Component;
 import com.mrcrayfish.device.api.app.Icons;
-import com.mrcrayfish.device.api.app.Layout;
 import com.mrcrayfish.device.api.app.component.Button;
-import com.mrcrayfish.device.api.app.component.ItemList;
-import com.mrcrayfish.device.api.app.listener.ClickListener;
-import com.mrcrayfish.device.api.app.renderer.ListItemRenderer;
 import com.mrcrayfish.device.api.utils.RenderUtil;
-import com.mrcrayfish.device.init.DeviceBlocks;
+import com.mrcrayfish.device.core.object.TrayItemWifi;
 import com.mrcrayfish.device.object.AppInfo;
+import com.mrcrayfish.device.object.TrayItem;
 import com.mrcrayfish.device.programs.system.SystemApplication;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class TaskBar
@@ -40,17 +34,25 @@ public class TaskBar
     private Button btnRight;
 
     private int offset = 0;
+    private int pingTimer = 0;
 
     private List<Application> applications;
+    private List<TrayItem> trayItems = new ArrayList<>();
 
     public TaskBar(List<Application> applications)
     {
         setupApplications(applications);
+        trayItems.add(new TrayItemWifi());
+    }
+
+    public void init()
+    {
+        trayItems.forEach(TrayItem::init);
     }
 
     public void setupApplications(List<Application> applications)
     {
-        this.applications = applications.stream().filter(app ->
+        final Predicate<Application> VALID_APPS = app ->
         {
             if(app instanceof SystemApplication)
             {
@@ -60,11 +62,7 @@ public class TaskBar
             {
                 if(MrCrayfishDeviceMod.proxy.getAllowedApplications().contains(app.getInfo()))
                 {
-                    if(MrCrayfishDeviceMod.DEVELOPER_MODE)
-                    {
-                        return Settings.isShowAllApps();
-                    }
-                    return true;
+                    return !MrCrayfishDeviceMod.DEVELOPER_MODE || Settings.isShowAllApps();
                 }
                 return false;
             }
@@ -73,8 +71,8 @@ public class TaskBar
                 return Settings.isShowAllApps();
             }
             return true;
-        }).collect(Collectors.toList());
-
+        };
+        this.applications = applications.stream().filter(VALID_APPS).collect(Collectors.toList());
     }
 
     public void init(int posX, int posY)
@@ -101,6 +99,12 @@ public class TaskBar
                 offset++;
             }
         });
+        init();
+    }
+
+    public void onTick()
+    {
+        trayItems.forEach(TrayItem::tick);
     }
 
     public void render(Laptop gui, Minecraft mc, int x, int y, int mouseX, int mouseY, float partialTicks)
@@ -109,13 +113,14 @@ public class TaskBar
         GlStateManager.enableBlend();
         mc.getTextureManager().bindTexture(APP_BAR_GUI);
         gui.drawTexturedModalRect(x, y, 0, 0, 1, 18);
-        RenderUtil.drawRectWithTexture(x + 1, y, 1, 0, Laptop.SCREEN_WIDTH - 52, 18, 1, 18);
-        RenderUtil.drawRectWithTexture(x + Laptop.SCREEN_WIDTH - 51, y, 2, 0, 51, 18, 1, 18);
+        int trayItemsWidth = trayItems.size() * 14;
+        RenderUtil.drawRectWithTexture(x + 1, y, 1, 0, Laptop.SCREEN_WIDTH - 36 - trayItemsWidth, 18, 1, 18);
+        RenderUtil.drawRectWithTexture(x + Laptop.SCREEN_WIDTH - 35 - trayItemsWidth, y, 2, 0, 35 + trayItemsWidth, 18, 1, 18);
         GlStateManager.disableBlend();
 
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         btnLeft.render(gui, mc, btnLeft.xPosition, btnLeft.yPosition, mouseX, mouseY, true, partialTicks);
-        btnRight.render(gui, mc, btnRight.xPosition, btnLeft.yPosition, mouseX, mouseY, true, partialTicks);
+        //btnRight.render(gui, mc, btnRight.xPosition, btnLeft.yPosition, mouseX, mouseY, true, partialTicks);
 
         for(int i = 0; i < APPS_DISPLAYED && i < applications.size(); i++)
         {
@@ -128,17 +133,23 @@ public class TaskBar
             }
         }
 
-        mc.fontRenderer.drawString(timeToString(mc.player.world.getWorldTime()), x + 374, y + 5, Color.WHITE.getRGB(), true);
+        mc.fontRenderer.drawString(timeToString(mc.player.world.getWorldTime()), x + 334, y + 5, Color.WHITE.getRGB(), true);
 
         mc.getTextureManager().bindTexture(APP_BAR_GUI);
 
-        if(isMouseInside(mouseX, mouseY, x + 357, y + 3, x + 369, y + 14))
-        {
-            Gui.drawRect(x + 369, y + 2, x + 357, y + 16, new Color(1.0F, 1.0F, 1.0F, 0.1F).getRGB());
-        }
-
         /* Settings App */
-        Icons.WIFI_HIGH.draw(mc, x + 358, y + 4);
+
+
+        int startX = x + 317;
+        for(int i = 0; i < trayItems.size(); i++)
+        {
+            int posX = startX - (trayItems.size() - 1 - i) * 14;
+            if(isMouseInside(mouseX, mouseY, posX, y + 2, posX + 13, y + 15))
+            {
+                Gui.drawRect(posX, y + 2, posX + 14, y + 16, new Color(1.0F, 1.0F, 1.0F, 0.1F).getRGB());
+            }
+            trayItems.get(i).getIcon().draw(mc, posX + 2, y + 4);
+        }
 
         /* Other Apps */
         if(isMouseInside(mouseX, mouseY, x + 18, y + 1, x + 236, y + 16))
@@ -146,7 +157,6 @@ public class TaskBar
             int appIndex = (mouseX - x - 1) / 16 - 1 + offset;
             if(appIndex < offset + APPS_DISPLAYED && appIndex < applications.size())
             {
-                mc.getTextureManager().bindTexture(APP_BAR_GUI);
                 gui.drawTexturedModalRect(x + (appIndex - offset) * 16 + 17, y + 1, 35, 0, 16, 16);
                 gui.drawHoveringText(Collections.singletonList(applications.get(appIndex).getInfo().getName()), mouseX, mouseY);
             }
@@ -171,15 +181,14 @@ public class TaskBar
             }
         }
 
-        if(isMouseInside(mouseX, mouseY, x + 357, y + 3, x + 369, y + 14))
+        int startX = x + 317;
+        for(int i = 0; i < trayItems.size(); i++)
         {
-            if(Laptop.getSystem().hasContext())
+            int posX = startX - (trayItems.size() - 1 - i) * 14;
+            if(isMouseInside(mouseX, mouseY, posX, y + 2, posX + 13, y + 15))
             {
-                Laptop.getSystem().closeContext();
-            }
-            else
-            {
-                Laptop.getSystem().openContext(createWifiMenu(), mouseX - 100, mouseY - 100);
+                trayItems.get(i).handleClick(mouseX, mouseY, mouseButton);
+                break;
             }
         }
     }
@@ -195,15 +204,4 @@ public class TaskBar
         int minutes = (int) Math.floor((time % 1000) / 1000.0 * 60);
         return String.format("%02d:%02d", hours, minutes);
     }
-
-    public static Layout createWifiMenu()
-    {
-        Layout layout = new Layout.Context(100, 100);
-        layout.setBackground((gui, mc, x, y, width, height, mouseX, mouseY, windowActive) ->
-        {
-            Gui.drawRect(x, y, x + width, y + height, new Color(0.65F, 0.65F, 0.65F, 0.9F).getRGB());
-        });
-        return layout;
-    }
-
 }

@@ -3,22 +3,24 @@ package com.mrcrayfish.device.init;
 import com.mrcrayfish.device.block.BlockLaptop;
 import com.mrcrayfish.device.block.BlockPaper;
 import com.mrcrayfish.device.block.BlockPrinter;
+import com.mrcrayfish.device.block.BlockRouter;
 import com.mrcrayfish.device.item.ItemLaptop;
 import com.mrcrayfish.device.item.ItemPaper;
-import com.mrcrayfish.device.item.ItemPrinter;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 
-public class DeviceBlocks
+
+public class DeviceBlocks 
 {
 	public static final Block LAPTOP;
+    public static final Block ROUTER;
 	public static final Block PRINTER;
 	public static final Block PAPER;
 
 	static
 	{
 		LAPTOP = new BlockLaptop();
+        ROUTER = new BlockRouter();
 		PRINTER = new BlockPrinter();
 		PAPER = new BlockPaper();
 	}
@@ -26,7 +28,8 @@ public class DeviceBlocks
 	public static void register()
 	{
 		registerBlock(LAPTOP, new ItemLaptop(LAPTOP));
-		registerBlock(PRINTER, new ItemPrinter(PRINTER));
+        registerBlock(ROUTER);
+		registerBlock(PRINTER);
 		registerBlock(PAPER, new ItemPaper(PAPER));
 	}
 

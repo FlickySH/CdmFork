@@ -1,18 +1,16 @@
 package com.mrcrayfish.device.object;
 
-import java.awt.Color;
-import java.util.HashMap;
-import java.util.Map;
-
-import com.mrcrayfish.device.api.app.Application;
 import com.mrcrayfish.device.api.app.Component;
 import com.mrcrayfish.device.core.Laptop;
 import com.mrcrayfish.device.object.tiles.Tile;
 import com.mrcrayfish.device.util.GuiHelper;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
+
+import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Game extends Component
 {
@@ -127,7 +125,7 @@ public class Game extends Component
 	}
 	
 	@Override
-	public void render(Laptop laptop, Minecraft mc, int x, int y, int mouseX, int mouseY, boolean windowActive, float partialTicks) 
+	public void render(Laptop laptop, Minecraft mc, int x, int y, int mouseX, int mouseY, boolean windowActive, float partialTicks)
 	{
 		//long start = System.currentTimeMillis();
 		

@@ -1,7 +1,5 @@
 package com.mrcrayfish.device.object;
 
-import java.awt.Color;
-
 import com.mrcrayfish.device.api.app.Component;
 import com.mrcrayfish.device.api.app.Layout;
 import com.mrcrayfish.device.core.Laptop;
@@ -11,10 +9,11 @@ import com.mrcrayfish.device.object.tools.ToolEraser;
 import com.mrcrayfish.device.object.tools.ToolEyeDropper;
 import com.mrcrayfish.device.object.tools.ToolPencil;
 import com.mrcrayfish.device.util.GuiHelper;
-
 import net.minecraft.client.Minecraft;
 
-public class Canvas extends Component 
+import java.awt.*;
+
+public class Canvas extends Component
 {
 	private Tool currentTool;
 	public static final Tool PENCIL = new ToolPencil();
@@ -58,7 +57,7 @@ public class Canvas extends Component
 	public void init(Layout layout) {}
 
 	@Override
-	public void render(Laptop laptop, Minecraft mc, int x, int y, int mouseX, int mouseY, boolean windowActive, float partialTicks) 
+	public void render(Laptop laptop, Minecraft mc, int x, int y, int mouseX, int mouseY, boolean windowActive, float partialTicks)
 	{
 		drawRect(xPosition, yPosition, xPosition + picture.getWidth() * picture.getPixelWidth() + 2, yPosition + picture.getHeight() * picture.getPixelHeight() + 2, Color.DARK_GRAY.getRGB());
 		drawRect(xPosition + 1, yPosition + 1, xPosition + picture.getWidth() * picture.getPixelWidth() + 1, yPosition + picture.getHeight() * picture.getPixelHeight() + 1, Color.WHITE.getRGB());
@@ -184,7 +183,7 @@ public class Canvas extends Component
 		return currentColour;
 	}
 	
-	public void setCurrentTool(Tool currentTool) 
+	public void setCurrentTool(Tool currentTool)
 	{
 		this.currentTool = currentTool;
 	}

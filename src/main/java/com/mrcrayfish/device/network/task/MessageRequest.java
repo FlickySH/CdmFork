@@ -2,8 +2,6 @@ package com.mrcrayfish.device.network.task;
 
 import com.mrcrayfish.device.api.task.Task;
 import com.mrcrayfish.device.api.task.TaskManager;
-import com.mrcrayfish.device.network.PacketHandler;
-
 import io.netty.buffer.ByteBuf;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
@@ -11,7 +9,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
-public class MessageRequest implements IMessage, IMessageHandler<MessageRequest, IMessage> 
+public class MessageRequest implements IMessage, IMessageHandler<MessageRequest, IMessage>
 {
 	private int id;
 	private Task request;
@@ -19,7 +17,7 @@ public class MessageRequest implements IMessage, IMessageHandler<MessageRequest,
 	
 	public MessageRequest() {}
 	
-	public MessageRequest(int id, Task request) 
+	public MessageRequest(int id, Task request)
 	{
 		this.id = id;
 		this.request = request;
@@ -31,7 +29,7 @@ public class MessageRequest implements IMessage, IMessageHandler<MessageRequest,
 	}
 	
 	@Override
-	public IMessage onMessage(MessageRequest message, MessageContext ctx) 
+	public IMessage onMessage(MessageRequest message, MessageContext ctx)
 	{
 		message.request.processRequest(message.nbt, ctx.getServerHandler().player.world, ctx.getServerHandler().player);
 		return new MessageResponse(message.id, message.request);

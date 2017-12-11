@@ -13,6 +13,7 @@ import com.mrcrayfish.device.api.utils.RenderUtil;
 import com.mrcrayfish.device.core.client.LaptopFontRenderer;
 import com.mrcrayfish.device.programs.system.SystemApplication;
 import com.mrcrayfish.device.programs.system.component.Explorer;
+import com.mrcrayfish.device.programs.system.component.Explorer;
 import com.mrcrayfish.device.programs.system.task.TaskUpdateApplicationData;
 import com.mrcrayfish.device.programs.system.task.TaskUpdateSystemData;
 import com.mrcrayfish.device.tileentity.TileEntityLaptop;
@@ -40,7 +41,7 @@ import java.util.List;
 public class Laptop extends GuiScreen implements System
 {
 	public static final int ID = 1;
-	
+
 	private static final ResourceLocation LAPTOP_GUI = new ResourceLocation(Reference.MOD_ID, "textures/gui/laptop.png");
 
 	public static final ResourceLocation ICON_TEXTURES = new ResourceLocation(Reference.MOD_ID, "textures/atlas/app_icons.png");
@@ -52,8 +53,8 @@ public class Laptop extends GuiScreen implements System
 	private static final List<ResourceLocation> WALLPAPERS = new ArrayList<>();
 
 	private static final int BORDER = 10;
-	private static final int DEVICE_WIDTH = 425;
-	private static final int DEVICE_HEIGHT = 239;
+	private static final int DEVICE_WIDTH = 384;
+	private static final int DEVICE_HEIGHT = 216;
 	static final int SCREEN_WIDTH = DEVICE_WIDTH - BORDER * 2;
 	static final int SCREEN_HEIGHT = DEVICE_HEIGHT - BORDER * 2;
 
@@ -72,7 +73,7 @@ public class Laptop extends GuiScreen implements System
 	private int currentWallpaper;
 	private int lastMouseX, lastMouseY;
 	private boolean dragging = false;
-	
+
 	public Laptop(TileEntityLaptop laptop)
 	{
 		this.appData = laptop.getApplicationData();
@@ -95,7 +96,7 @@ public class Laptop extends GuiScreen implements System
 	}
 
 	@Override
-	public void initGui() 
+	public void initGui()
 	{
 		Keyboard.enableRepeatEvents(true);
 		int posX = (width - DEVICE_WIDTH) / 2;
@@ -105,29 +106,29 @@ public class Laptop extends GuiScreen implements System
 
 	@Override
 	public void onGuiClosed()
-    {
-        Keyboard.enableRepeatEvents(false);
+	{
+		Keyboard.enableRepeatEvents(false);
 
-        /* Close all windows and sendTask application data */
-        for(Window<Application> window : windows)
+		/* Close all windows and sendTask application data */
+		for(Window<Application> window : windows)
 		{
-        	if(window != null)
+			if(window != null)
 			{
-        		window.close();
+				window.close();
 			}
 		}
 
 		/* Send system data */
-        NBTTagCompound systemData = new NBTTagCompound();
-        systemData.setInteger("CurrentWallpaper", currentWallpaper);
-        systemData.setTag("Settings", settings.toTag());
-        TaskManager.sendTask(new TaskUpdateSystemData(pos, systemData));
+		NBTTagCompound systemData = new NBTTagCompound();
+		systemData.setInteger("CurrentWallpaper", currentWallpaper);
+		systemData.setTag("Settings", settings.toTag());
+		TaskManager.sendTask(new TaskUpdateSystemData(pos, systemData));
 
 		Laptop.pos = null;
-        Laptop.system = null;
+		Laptop.system = null;
 		Laptop.mainDrive = null;
-    }
-	
+	}
+
 	@Override
 	public void onResize(Minecraft mcIn, int width, int height)
 	{
@@ -140,10 +141,12 @@ public class Laptop extends GuiScreen implements System
 			}
 		}
 	}
-	
+
 	@Override
 	public void updateScreen()
 	{
+		bar.onTick();
+
 		for(Window window : windows)
 		{
 			if(window != null)
@@ -154,34 +157,34 @@ public class Laptop extends GuiScreen implements System
 
 		Explorer.refreshList = false;
 	}
-	
+
 	@Override
-	public void drawScreen(int mouseX, int mouseY, float partialTicks) 
+	public void drawScreen(int mouseX, int mouseY, float partialTicks)
 	{
 		this.drawDefaultBackground();
-		
+
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.mc.getTextureManager().bindTexture(LAPTOP_GUI);
-		
+
 		/* Physical Screen */
 		int posX = (width - DEVICE_WIDTH) / 2;
 		int posY = (height - DEVICE_HEIGHT) / 2;
-		
+
 		/* Corners */
 		this.drawTexturedModalRect(posX, posY, 0, 0, BORDER, BORDER); // TOP-LEFT
 		this.drawTexturedModalRect(posX + DEVICE_WIDTH - BORDER, posY, 11, 0, BORDER, BORDER); // TOP-RIGHT
 		this.drawTexturedModalRect(posX + DEVICE_WIDTH - BORDER, posY + DEVICE_HEIGHT - BORDER, 11, 11, BORDER, BORDER); // BOTTOM-RIGHT
 		this.drawTexturedModalRect(posX, posY + DEVICE_HEIGHT - BORDER, 0, 11, BORDER, BORDER); // BOTTOM-LEFT
-		
+
 		/* Edges */
 		RenderUtil.drawRectWithTexture(posX + BORDER, posY, 10, 0, SCREEN_WIDTH, BORDER, 1, BORDER); // TOP
 		RenderUtil.drawRectWithTexture(posX + DEVICE_WIDTH - BORDER, posY + BORDER, 11, 10, BORDER, SCREEN_HEIGHT, BORDER, 1); // RIGHT
 		RenderUtil.drawRectWithTexture(posX + BORDER, posY + DEVICE_HEIGHT - BORDER, 10, 11, SCREEN_WIDTH, BORDER, 1, BORDER); // BOTTOM
 		RenderUtil.drawRectWithTexture(posX, posY + BORDER, 0, 11, BORDER, SCREEN_HEIGHT, BORDER, 1); // LEFT
-		
+
 		/* Center */
 		RenderUtil.drawRectWithTexture(posX + BORDER, posY + BORDER, 10, 10, SCREEN_WIDTH, SCREEN_HEIGHT, 1, 1);
-		
+
 		/* Wallpaper */
 		this.mc.getTextureManager().bindTexture(WALLPAPERS.get(currentWallpaper));
 		RenderUtil.drawRectWithFullTexture(posX + 10, posY + 10, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -210,7 +213,7 @@ public class Laptop extends GuiScreen implements System
 				window.render(this, mc, posX + BORDER, posY + BORDER, mouseX, mouseY, i == 0 && !insideContext, partialTicks);
 			}
 		}
-		
+
 		/* Application Bar */
 		bar.render(this, mc, posX + 10, posY + DEVICE_HEIGHT - 28, mouseX, mouseY, partialTicks);
 
@@ -221,13 +224,13 @@ public class Laptop extends GuiScreen implements System
 
 		super.drawScreen(mouseX, mouseY, partialTicks);
 	}
-	
+
 	@Override
 	protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException
 	{
 		this.lastMouseX = mouseX;
 		this.lastMouseY = mouseY;
-		
+
 		int posX = (width - SCREEN_WIDTH) / 2;
 		int posY = (height - SCREEN_HEIGHT) / 2;
 
@@ -262,13 +265,13 @@ public class Laptop extends GuiScreen implements System
 					windows[0] = window;
 
 					windows[0].handleMouseClick(this, posX, posY, mouseX, mouseY, mouseButton);
-					
+
 					if(isMouseWithinWindowBar(mouseX, mouseY, dialogWindow))
 					{
 						this.dragging = true;
 						return;
 					}
-		
+
 					if(isMouseWithinWindowBar(mouseX, mouseY, window) && dialogWindow == null)
 					{
 						this.dragging = true;
@@ -278,12 +281,12 @@ public class Laptop extends GuiScreen implements System
 				}
 			}
 		}
-		
+
 		super.mouseClicked(mouseX, mouseY, mouseButton);
 	}
-	
+
 	@Override
-	protected void mouseReleased(int mouseX, int mouseY, int state) 
+	protected void mouseReleased(int mouseX, int mouseY, int state)
 	{
 		super.mouseReleased(mouseX, mouseY, state);
 		this.dragging = false;
@@ -301,35 +304,35 @@ public class Laptop extends GuiScreen implements System
 			windows[0].handleMouseRelease(mouseX, mouseY, state);
 		}
 	}
-	
+
 	@Override
 	public void handleKeyboardInput() throws IOException
-    {
-        if (Keyboard.getEventKeyState())
-        {
-        	char pressed = Keyboard.getEventCharacter();
-        	int code = Keyboard.getEventKey();
+	{
+		if (Keyboard.getEventKeyState())
+		{
+			char pressed = Keyboard.getEventCharacter();
+			int code = Keyboard.getEventKey();
 
-            if(windows[0] != null)
-    		{
-    			windows[0].handleKeyTyped(pressed, code);
-    		}
-            
-            super.keyTyped(pressed, code);
-        }
-        else
-        {
-        	if(windows[0] != null)
-    		{
-    			windows[0].handleKeyReleased(Keyboard.getEventCharacter(), Keyboard.getEventKey());
-    		}
-        }
+			if(windows[0] != null)
+			{
+				windows[0].handleKeyTyped(pressed, code);
+			}
 
-        this.mc.dispatchKeypresses();
-    }
-	
+			super.keyTyped(pressed, code);
+		}
+		else
+		{
+			if(windows[0] != null)
+			{
+				windows[0].handleKeyReleased(Keyboard.getEventCharacter(), Keyboard.getEventKey());
+			}
+		}
+
+		this.mc.dispatchKeypresses();
+	}
+
 	@Override
-	protected void mouseClickMove(int mouseX, int mouseY, int clickedMouseButton, long timeSinceLastClick) 
+	protected void mouseClickMove(int mouseX, int mouseY, int clickedMouseButton, long timeSinceLastClick)
 	{
 		int posX = (width - SCREEN_WIDTH) / 2;
 		int posY = (height - SCREEN_HEIGHT) / 2;
@@ -381,13 +384,13 @@ public class Laptop extends GuiScreen implements System
 		this.lastMouseX = mouseX;
 		this.lastMouseY = mouseY;
 	}
-	
+
 	@Override
 	public void handleMouseInput() throws IOException
 	{
 		super.handleMouseInput();
 		int mouseX = Mouse.getEventX() * this.width / this.mc.displayWidth;
-        int mouseY = this.height - Mouse.getEventY() * this.height / this.mc.displayHeight - 1;
+		int mouseY = this.height - Mouse.getEventY() * this.height / this.mc.displayHeight - 1;
 		int scroll = Mouse.getEventDWheel();
 		if(scroll != 0)
 		{
@@ -399,7 +402,7 @@ public class Laptop extends GuiScreen implements System
 	}
 
 	@Override
-	public void drawHoveringText(List<String> textLines, int x, int y) 
+	public void drawHoveringText(List<String> textLines, int x, int y)
 	{
 		super.drawHoveringText(textLines, x, y);
 	}
@@ -445,12 +448,12 @@ public class Laptop extends GuiScreen implements System
 		{
 			app.restoreDefaultLayout();
 		}
-		
+
 		addWindow(window);
 
-	    Minecraft.getMinecraft().getSoundHandler().playSound(PositionedSoundRecord.getMasterRecord(SoundEvents.UI_BUTTON_CLICK, 1.0F));
+		Minecraft.getMinecraft().getSoundHandler().playSound(PositionedSoundRecord.getMasterRecord(SoundEvents.UI_BUTTON_CLICK, 1.0F));
 	}
-	
+
 	public void close(Application app)
 	{
 		for(int i = 0; i < windows.length; i++)
@@ -481,7 +484,7 @@ public class Laptop extends GuiScreen implements System
 			}
 		}
 	}
-	
+
 	private void addWindow(Window<Application> window)
 	{
 		if(hasReachedWindowLimit())
@@ -543,7 +546,7 @@ public class Laptop extends GuiScreen implements System
 		int posY = (height - SCREEN_HEIGHT) / 2;
 		return GuiHelper.isMouseInside(mouseX, mouseY, posX + window.offsetX, posY + window.offsetY, posX + window.offsetX + window.width, posY + window.offsetY + window.height);
 	}
-	
+
 	public boolean isMouseWithinApp(int mouseX, int mouseY, Window window)
 	{
 		int posX = (width - SCREEN_WIDTH) / 2;
@@ -553,7 +556,7 @@ public class Laptop extends GuiScreen implements System
 
 	public boolean isApplicationRunning(String appId)
 	{
-		for(Window window : windows) 
+		for(Window window : windows)
 		{
 			if(window != null && ((Application) window.content).getInfo().getFormattedId().equals(appId))
 			{
@@ -570,7 +573,7 @@ public class Laptop extends GuiScreen implements System
 			currentWallpaper++;
 		}
 	}
-	
+
 	public void prevWallpaper()
 	{
 		if(currentWallpaper - 1 >= 0)
@@ -648,6 +651,7 @@ public class Laptop extends GuiScreen implements System
 	{
 		layout.updateComponents(x, y);
 		context = layout;
+		layout.init();
 	}
 
 	@Override

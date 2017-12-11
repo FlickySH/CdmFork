@@ -1,7 +1,6 @@
 package com.mrcrayfish.device.network.task;
 
 import com.mrcrayfish.device.api.task.Task;
-
 import com.mrcrayfish.device.api.task.TaskManager;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.nbt.NBTTagCompound;
@@ -10,7 +9,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
-public class MessageResponse implements IMessage, IMessageHandler<MessageResponse, IMessage> 
+public class MessageResponse implements IMessage, IMessageHandler<MessageResponse, IMessage>
 {
 	private int id;
 	private Task request;
@@ -18,14 +17,14 @@ public class MessageResponse implements IMessage, IMessageHandler<MessageRespons
 	
 	public MessageResponse() {}
 	
-	public MessageResponse(int id, Task request) 
+	public MessageResponse(int id, Task request)
 	{
 		this.id = id;
 		this.request = request;
 	}
 	
 	@Override
-	public IMessage onMessage(MessageResponse message, MessageContext ctx) 
+	public IMessage onMessage(MessageResponse message, MessageContext ctx)
 	{
 		message.request.processResponse(message.nbt);
 		message.request.callback(message.nbt);

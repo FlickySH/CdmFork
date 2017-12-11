@@ -3,7 +3,6 @@ package com.mrcrayfish.device.object.tiles;
 import com.mrcrayfish.device.api.utils.RenderUtil;
 import com.mrcrayfish.device.object.Game;
 import com.mrcrayfish.device.object.Game.Layer;
-import com.mrcrayfish.device.util.GuiHelper;
 
 public class Tile
 {
@@ -75,7 +74,7 @@ public class Tile
 	
 	public void render(Game game, int x, int y, Layer layer)
 	{
-		RenderUtil.drawRectWithTexture(game.xPosition + x * Tile.WIDTH , game.yPosition + y * Tile.HEIGHT, this.x * 16, this.y * 16, WIDTH, HEIGHT, 16, 16);	
+		RenderUtil.drawRectWithTexture(game.xPosition + x * Tile.WIDTH , game.yPosition + y * Tile.HEIGHT, this.x * 16, this.y * 16, WIDTH, HEIGHT, 16, 16);
 	}
 	
 	public void renderForeground(Game game, int x, int y, Layer layer) {}

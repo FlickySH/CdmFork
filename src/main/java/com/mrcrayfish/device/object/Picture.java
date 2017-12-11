@@ -2,8 +2,6 @@ package com.mrcrayfish.device.object;
 
 import com.mrcrayfish.device.api.io.File;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagIntArray;
-import net.minecraft.nbt.NBTTagList;
 
 import java.awt.*;
 import java.util.Arrays;
@@ -16,7 +14,7 @@ public class Picture
 	public int[] pixels;
 	public Size size;
 	
-	public Picture(String name, String author, Size size) 
+	public Picture(String name, String author, Size size)
 	{
 		this.name = name;
 		this.author = author;
@@ -40,7 +38,7 @@ public class Picture
 		return name;
 	}
 	
-	public String getAuthor() 
+	public String getAuthor()
 	{
 		return author;
 	}
@@ -81,7 +79,7 @@ public class Picture
 	}
 	
 	@Override
-	public String toString() 
+	public String toString()
 	{
 		return name;
 	}
@@ -120,8 +118,11 @@ public class Picture
 		
 		public static Size getFromSize(int size)
 		{
-			if(size == 16) return X16;
-			return X32;
+			if(size == 16)
+				return X16;
+			if(size == 32)
+				return X32;
+			return null;
 		}
 	}
 }

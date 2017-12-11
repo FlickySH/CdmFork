@@ -1,27 +1,15 @@
 package com.mrcrayfish.device.tileentity;
 
-import static com.mrcrayfish.device.tileentity.TileEntityPrinter.State.IDLE;
-import static com.mrcrayfish.device.tileentity.TileEntityPrinter.State.LOADING_PAPER;
-import static com.mrcrayfish.device.tileentity.TileEntityPrinter.State.PRINTING;
-
-import java.util.ArrayDeque;
-import java.util.Deque;
-
-import javax.annotation.Nullable;
-
 import com.mrcrayfish.device.DeviceConfig;
 import com.mrcrayfish.device.api.print.IPrint;
 import com.mrcrayfish.device.block.BlockPrinter;
 import com.mrcrayfish.device.init.DeviceSounds;
 import com.mrcrayfish.device.util.CollisionHelper;
 import com.mrcrayfish.device.util.TileEntityUtil;
-
-import net.minecraft.block.BlockColored;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -34,6 +22,14 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.common.util.Constants;
 
+import javax.annotation.Nullable;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Queue;
+
+import static com.mrcrayfish.device.tileentity.TileEntityPrinter.State.*;
+
 /**
  * Author: MrCrayfish
  */
@@ -41,8 +37,6 @@ public class TileEntityPrinter extends TileEntity implements ITickable
 {
     private String name = "Printer";
     private State state = IDLE;
-    private EnumDyeColor color;
-    private boolean dirtyColor;
 
     private Deque<IPrint> printQueue = new ArrayDeque<>();
     private IPrint currentPrint;
@@ -96,13 +90,6 @@ public class TileEntityPrinter extends TileEntity implements ITickable
         {
             print(printQueue.poll());
         }
-
-        if(this.color == null) {
-            this.color = this.world.getBlockState(this.pos).getValue(BlockColored.COLOR);
-        } else if(this.dirtyColor) {
-            this.world.setBlockState(this.pos, this.world.getBlockState(this.pos).withProperty(BlockColored.COLOR, this.color), 3);
-            this.dirtyColor = false;
-        }
     }
 
     @Override
@@ -143,22 +130,6 @@ public class TileEntityPrinter extends TileEntity implements ITickable
                 printQueue.offer(print);
             }
         }
-
-        if(compound.hasKey("color")) {
-            int ord = compound.getInteger("color");
-            if(ord >= 0 && ord < EnumDyeColor.values().length) {
-                this.color = EnumDyeColor.values()[ord];
-                this.dirtyColor = true;
-            }
-        }
-    }
-
-    public void setColor(EnumDyeColor color) {
-        this.color = color;
-    }
-
-    public EnumDyeColor getColor() {
-        return this.color;
     }
 
     @Override
@@ -182,10 +153,6 @@ public class TileEntityPrinter extends TileEntity implements ITickable
             });
             compound.setTag("queue", queue);
         }
-
-        if(this.color != null) {
-            compound.setInteger("color", this.color.ordinal());
-        }
         return compound;
     }
 
@@ -199,16 +166,11 @@ public class TileEntityPrinter extends TileEntity implements ITickable
     @Override
     public NBTTagCompound getUpdateTag()
     {
-        NBTTagCompound tag;
         if(!bufferTag.hasNoTags())
         {
-            tag = super.writeToNBT(bufferTag);
+            NBTTagCompound updateTag = super.writeToNBT(bufferTag);
             bufferTag = new NBTTagCompound();
-        } else {
-            tag = this.writeToNBT(new NBTTagCompound());
-        }
-        if(this.color != null) {
-            tag.setInteger("color", this.color.ordinal());
+            return updateTag;
         }
         return this.writeToNBT(new NBTTagCompound());
     }

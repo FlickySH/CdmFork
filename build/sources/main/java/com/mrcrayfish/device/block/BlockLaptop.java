@@ -11,19 +11,16 @@ import com.mrcrayfish.device.tileentity.TileEntityLaptop;
 
 import com.mrcrayfish.device.util.TileEntityUtil;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockColored;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -31,7 +28,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
@@ -50,12 +46,10 @@ public class BlockLaptop extends BlockHorizontal implements ITileEntityProvider
 	private static final AxisAlignedBB SELECTION_BOX_OPEN = new AxisAlignedBB(0, 0, 0, 1, 12 * 0.0625, 1);
 	private static final AxisAlignedBB SELECTION_BOX_CLOSED = new AxisAlignedBB(0, 0, 0, 1, 3 * 0.0625, 1);
 
-
-
 	public BlockLaptop()
 	{
 		super(Material.ANVIL);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(TYPE, Type.BASE).withProperty(BlockColored.COLOR, EnumDyeColor.RED));
+		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(TYPE, Type.BASE));
 		this.setCreativeTab(MrCrayfishDeviceMod.tabDevice);
 		this.setUnlocalizedName("laptop");
 		this.setRegistryName("laptop");
@@ -80,7 +74,7 @@ public class BlockLaptop extends BlockHorizontal implements ITileEntityProvider
 		if(tileEntity instanceof TileEntityLaptop)
 		{
 			TileEntityLaptop laptop = (TileEntityLaptop) tileEntity;
-			if(laptop.open)
+			if(laptop.isOpen())
 			{
 				return SELECTION_BOX_OPEN;
 			}
@@ -99,7 +93,7 @@ public class BlockLaptop extends BlockHorizontal implements ITileEntityProvider
 		if(tileEntity instanceof TileEntityLaptop)
 		{
 			TileEntityLaptop laptop = (TileEntityLaptop) tileEntity;
-			if(laptop.open)
+			if(laptop.isOpen())
 			{
 				Block.addCollisionBoxToList(pos, entityBox, collidingBoxes, BODY_OPEN_BOX);
 				Block.addCollisionBoxToList(pos, entityBox, collidingBoxes, SCREEN_BOXES[state.getValue(FACING).getHorizontalIndex()]);
@@ -117,9 +111,7 @@ public class BlockLaptop extends BlockHorizontal implements ITileEntityProvider
 	public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand)
 	{
 		IBlockState state = super.getStateForPlacement(world, pos, facing, hitX, hitY, hitZ, meta, placer, hand);
-		ItemStack stack = placer.getHeldItem(hand);
-		EnumDyeColor color = EnumDyeColor.values()[stack.getItemDamage()];
-		return state.withProperty(FACING, placer.getHorizontalFacing()).withProperty(BlockColored.COLOR, color);
+		return state.withProperty(FACING, placer.getHorizontalFacing());
 	}
 
 	@Override
@@ -172,7 +164,7 @@ public class BlockLaptop extends BlockHorizontal implements ITileEntityProvider
 					return true;
 				}
 
-				if(laptop.open && worldIn.isRemote)
+				if(laptop.isOpen() && worldIn.isRemote)
 				{
 					playerIn.openGui(MrCrayfishDeviceMod.instance, Laptop.ID, worldIn, pos.getX(), pos.getY(), pos.getZ());
 				}
@@ -188,43 +180,44 @@ public class BlockLaptop extends BlockHorizontal implements ITileEntityProvider
 	}
 
 	@Override
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
+	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player, boolean willHarvest)
 	{
-		TileEntity tileEntity = worldIn.getTileEntity(pos);
-		if(tileEntity instanceof TileEntityLaptop)
+		if(!world.isRemote && !player.capabilities.isCreativeMode)
 		{
-			TileEntityLaptop laptop = (TileEntityLaptop) tileEntity;
+			TileEntity tileEntity = world.getTileEntity(pos);
+			if(tileEntity instanceof TileEntityLaptop)
+			{
+				TileEntityLaptop laptop = (TileEntityLaptop) tileEntity;
 
-			NBTTagCompound tileEntityTag = new NBTTagCompound();
-			laptop.writeToNBT(tileEntityTag);
-			tileEntityTag.removeTag("x");
-			tileEntityTag.removeTag("y");
-			tileEntityTag.removeTag("z");
-			tileEntityTag.removeTag("id");
-			tileEntityTag.removeTag("open");
-			int data = tileEntityTag.getInteger("color");
-			tileEntityTag.removeTag("color");
+				NBTTagCompound tileEntityTag = new NBTTagCompound();
+				laptop.writeToNBT(tileEntityTag);
+				tileEntityTag.removeTag("x");
+				tileEntityTag.removeTag("y");
+				tileEntityTag.removeTag("z");
+				tileEntityTag.removeTag("id");
+				tileEntityTag.removeTag("open");
 
-			NBTTagCompound compound = new NBTTagCompound();
-			compound.setTag("BlockEntityTag", tileEntityTag);
+				NBTTagCompound compound = new NBTTagCompound();
+				compound.setTag("BlockEntityTag", tileEntityTag);
 
-			ItemStack drop = new ItemStack(Item.getItemFromBlock(this), 1, data);
-			drop.setTagCompound(compound);
+				ItemStack drop = new ItemStack(Item.getItemFromBlock(this));
+				drop.setTagCompound(compound);
 
-			worldIn.spawnEntity(new EntityItem(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, drop));
+				world.spawnEntity(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, drop));
+			}
 		}
-		super.breakBlock(worldIn, pos, state);
+		return super.removedByPlayer(state, world, pos, player, willHarvest);
 	}
 
 	@Override
 	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)
 	{
-		state = state.withProperty(TYPE, Type.BASE);
-		return state;
+		return state.withProperty(TYPE, Type.BASE);
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
+	public TileEntity createNewTileEntity(World worldIn, int meta)
+	{
 		return new TileEntityLaptop();
 	}
 
@@ -243,7 +236,7 @@ public class BlockLaptop extends BlockHorizontal implements ITileEntityProvider
 	@Override
 	protected BlockStateContainer createBlockState()
 	{
-		return new BlockStateContainer(this, FACING, TYPE, BlockColored.COLOR);
+		return new BlockStateContainer(this, FACING, TYPE);
 	}
 
 	@Override
@@ -251,15 +244,6 @@ public class BlockLaptop extends BlockHorizontal implements ITileEntityProvider
 	{
 		TileEntity tileentity = worldIn.getTileEntity(pos);
 		return tileentity != null && tileentity.receiveClientEvent(id, param);
-	}
-
-	@Override
-	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
-		if(itemIn == MrCrayfishDeviceMod.tabDevice || itemIn == CreativeTabs.SEARCH) {
-			for(EnumDyeColor color : EnumDyeColor.values()) {
-				items.add(new ItemStack(this, 1, color.getMetadata()));
-			}
-		}
 	}
 
 	public static enum Type implements IStringSerializable

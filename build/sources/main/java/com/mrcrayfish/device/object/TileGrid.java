@@ -23,11 +23,11 @@ public class TileGrid extends Component
 	private Label labelCurrentCategory;
 	private Button btnNextCategory;
 	private Button btnPrevCategory;
-
+	
 	private int currentCategory;
 	private List<Tile> tabTiles;
 	private Game game;
-
+	
 	public TileGrid(int left, int top, Game game)
 	{
 		super(left, top);
@@ -35,13 +35,13 @@ public class TileGrid extends Component
 		this.tabTiles = new ArrayList<Tile>();
 		this.game = game;
 	}
-
+	
 	@Override
 	public void init(Layout layout)
 	{
 		labelCurrentCategory = new Label("", left + 14, top + 2);
 		layout.addComponent(labelCurrentCategory);
-
+		
 		btnNextCategory = new Button(left + 81, top, Icons.CHEVRON_RIGHT);
 		btnNextCategory.setPadding(1);
 		btnNextCategory.setClickListener(new ClickListener()
@@ -57,7 +57,7 @@ public class TileGrid extends Component
 			}
 		});
 		layout.addComponent(btnNextCategory);
-
+		
 		btnPrevCategory = new Button(left, top, Icons.CHEVRON_LEFT);
 		btnPrevCategory.setPadding(1);
 		btnPrevCategory.setClickListener(new ClickListener()
@@ -73,16 +73,16 @@ public class TileGrid extends Component
 			}
 		});
 		layout.addComponent(btnPrevCategory);
-
+		
 		updateTiles();
 	}
 
 	@Override
-	public void render(Laptop laptop, Minecraft mc, int x, int y, int mouseX, int mouseY, boolean windowActive, float partialTicks)
+	public void render(Laptop laptop, Minecraft mc, int x, int y, int mouseX, int mouseY, boolean windowActive, float partialTicks) 
 	{
 		drawRect(xPosition, yPosition + 15, xPosition + 93, yPosition + 100, Color.DARK_GRAY.getRGB());
 		drawRect(xPosition + 1, yPosition + 16, xPosition + 92, yPosition + 99, Color.GRAY.getRGB());
-
+		
 
 		mc.getTextureManager().bindTexture(Game.ICONS);
 		for(int i = 0; i < tabTiles.size(); i++)
@@ -113,7 +113,7 @@ public class TileGrid extends Component
 			}
 		}
 	}
-
+	
 	@Override
 	public void handleMouseClick(int mouseX, int mouseY, int mouseButton)
 	{
@@ -128,14 +128,14 @@ public class TileGrid extends Component
 			}
 		}
 	}
-
+	
 	public void updateTiles()
 	{
 		tabTiles.clear();
-
+		
 		Category category = Tile.Category.values()[currentCategory];
 		labelCurrentCategory.setText(category.name);
-
+		
 		for(Tile tile : Game.getRegisteredtiles().values())
 		{
 			if(tile.getCategory() == category)

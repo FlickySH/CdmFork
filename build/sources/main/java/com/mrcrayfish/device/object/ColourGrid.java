@@ -1,16 +1,14 @@
 package com.mrcrayfish.device.object;
 
-import java.awt.Color;
-
-import com.mrcrayfish.device.api.app.Application;
 import com.mrcrayfish.device.api.app.Component;
 import com.mrcrayfish.device.api.app.component.Slider;
 import com.mrcrayfish.device.core.Laptop;
 import com.mrcrayfish.device.util.GuiHelper;
-
 import net.minecraft.client.Minecraft;
 
-public class ColourGrid extends Component 
+import java.awt.*;
+
+public class ColourGrid extends Component
 {
 	private static Color[] colours = { Color.BLACK, Color.GRAY, Color.LIGHT_GRAY, Color.WHITE, Color.RED, Color.ORANGE, Color.YELLOW,
 			Color.GREEN, new Color(0, 150, 0), new Color(0, 255, 255), new Color(0, 148, 255), Color.BLUE, new Color(72, 0, 255), Color.MAGENTA, new Color(255, 0, 110) };
@@ -24,7 +22,7 @@ public class ColourGrid extends Component
 
 	private int width;
 	
-	public ColourGrid(int left, int top, int width, Canvas canvas, Slider redSlider, Slider greenSlider, Slider blueSlider) 
+	public ColourGrid(int left, int top, int width, Canvas canvas, Slider redSlider, Slider greenSlider, Slider blueSlider)
 	{
 		super(left, top);
 		this.width = width;
@@ -35,7 +33,7 @@ public class ColourGrid extends Component
 	}
 
 	@Override
-	public void render(Laptop laptop, Minecraft mc, int x, int y, int mouseX, int mouseY, boolean windowActive, float partialTicks) 
+	public void render(Laptop laptop, Minecraft mc, int x, int y, int mouseX, int mouseY, boolean windowActive, float partialTicks)
 	{
 		int endX = xPosition + width + 2;
 		int endY = yPosition + (colours.length / 5) * 10 + 2;

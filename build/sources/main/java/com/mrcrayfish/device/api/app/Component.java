@@ -1,5 +1,6 @@
 package com.mrcrayfish.device.api.app;
 
+import com.mrcrayfish.device.api.app.component.ComboBox;
 import com.mrcrayfish.device.core.Laptop;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -60,6 +61,10 @@ public abstract class Component extends Gui
 	{
 		this.left = left;
 		this.top = top;
+	}
+
+	public Component(){
+
 	}
 	
 	/**
